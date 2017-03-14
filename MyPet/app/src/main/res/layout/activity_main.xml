@@ -14,16 +14,13 @@
         <TextView
         android:id="@+id/pet_name_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="24dp"
-        />
+        android:layout_height="wrap_content"/>
 
         <TextView
         android:id="@+id/pet_breed_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="24dp"
-        />
+        android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
@@ -45,5 +42,9 @@
             android:src="@drawable/arrow_right" />
 
     </LinearLayout>
+
+
+
+
 
 </LinearLayout>

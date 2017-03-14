@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">MyPet</string>
 
-    <string name="pet_name_1">Bob</string>
-    <string name="pet_name_2">Liza</string>
-    <string name="pet_name_3">Snoopy</string>
+    <string name="pet_name_1">1.Bob</string>
+    <string name="pet_name_2">2.Liza</string>
+    <string name="pet_name_3">3.Kimba</string>
 
-    <string name="pet_breed_1">Dog</string>
-    <string name="pet_breed_2">Cat</string>
+    <string name="pet_breed_1">Cat</string>
+    <string name="pet_breed_2">Dog</string>
     <string name="pet_breed_3">Parrot</string>
 
 </resources>
