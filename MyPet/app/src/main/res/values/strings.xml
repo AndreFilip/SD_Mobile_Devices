@@ -1,12 +1,33 @@
 <resources>
     <string name="app_name">MyPet</string>
 
-    <string name="pet_name_1">1.Bob</string>
-    <string name="pet_name_2">2.Liza</string>
-    <string name="pet_name_3">3.Kimba</string>
+    <string name="hint_text">Write more information here ...</string>
 
-    <string name="pet_breed_1">Cat</string>
-    <string name="pet_breed_2">Dog</string>
-    <string name="pet_breed_3">Parrot</string>
+    <string name="bob">Bob</string>
+    <string name="liza">Liza</string>
+    <string name="kimba">Kimba</string>
+
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="parrot">Parrot</string>
+
+    <string name="american_shorthair">Am/can Shorthair</string>
+    <string name="labrador">Labrador</string>
+    <string name="cockatiel">Cockatiel</string>
+
+    <string name="male">M</string>
+    <string name="female">F</string>
+
+    <string name="blonde">Blonde</string>
+    <string name="grey">Grey</string>
+
+    <string name="date_bob">10/6/2012</string>
+    <string name="date_liza">22/3/2010</string>
+    <string name="date_kimba">4/9/2013</string>
+
+    <string name="owner1">John Silver</string>
+    <string name="owner2">Eleanor Guthrie</string>
+    <string name="owner3">Charles Vane</string>
+
 
 </resources>
