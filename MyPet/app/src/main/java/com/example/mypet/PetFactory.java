@@ -5,28 +5,61 @@ import java.util.List;
 
 class PetFactory {
 
-    private static List<Pet> listOfPets = new ArrayList<>() ;
+    private static List<Pet> listOfDogs = new ArrayList<>() ;
+    private static List<Pet> listOfCats = new ArrayList<>() ;
+    private static List<Pet> listOfOther = new ArrayList<>() ;
 
     private PetFactory () {
 
     }
 
-    private static void add (int PetName,int PetAnimal, int PetBreed, int PetSex, int PetColour, int PetDateOfBirth, int PetOwner, int image) {
+    private static void addDog (int PetName,int PetAnimal, int PetBreed, int PetSex, int PetColour, int PetDateOfBirth, int PetOwner, int image) {
         Pet pet = new Pet(PetName,PetAnimal, PetBreed, PetSex,PetColour, PetDateOfBirth, PetOwner, image);
-        listOfPets.add(pet);
+        listOfDogs.add(pet);
     }
 
-    private static void initialize () {
-        add(R.string.bob,  R.string.cat, R.string.american_shorthair ,R.string.male,R.string.grey, R.string.date_bob,R.string.owner1, R.drawable.bob_cat);
-        add(R.string.liza, R.string.dog,R.string.labrador ,R.string.female,R.string.blonde, R.string.date_liza,R.string.owner2, R.drawable.liza_dog);
-        add(R.string.kimba, R.string.parrot,R.string.cockatiel ,R.string.female,R.string.grey, R.string.date_kimba,R.string.owner3, R.drawable.kimba_parrot);
+    private static void addCat(int PetName,int PetAnimal, int PetBreed, int PetSex, int PetColour, int PetDateOfBirth, int PetOwner, int image) {
+        Pet pet = new Pet(PetName,PetAnimal, PetBreed, PetSex,PetColour, PetDateOfBirth, PetOwner, image);
+        listOfCats.add(pet);
     }
 
-    static List<Pet> getListOfPets() {
-        initialize();
-        return listOfPets;
+    private static void addOther (int PetName,int PetAnimal, int PetBreed, int PetSex, int PetColour, int PetDateOfBirth, int PetOwner, int image) {
+        Pet pet = new Pet(PetName,PetAnimal, PetBreed, PetSex,PetColour, PetDateOfBirth, PetOwner, image);
+        listOfOther.add(pet);
     }
 
+    private static void initializeDogs () {
+        addDog(R.string.liza, R.string.dog,R.string.labrador ,R.string.female,R.string.blonde, R.string.date_liza,R.string.owner1, R.drawable.liza_dog);
+        addDog(R.string.jaxon, R.string.dog,R.string.rotweiller ,R.string.male,R.string.black, R.string.date_jaxon,R.string.owner11, R.drawable.jaxon_dog);
+        addDog(R.string.roni, R.string.dog,R.string.beagle ,R.string.male,R.string.brown, R.string.date_roni,R.string.owner12, R.drawable.roni_dog);
+
+    }
+
+    private static void initializeCats () {
+        addCat(R.string.bob,  R.string.cat, R.string.american_shorthair ,R.string.male,R.string.grey, R.string.date_bob,R.string.owner2, R.drawable.bob_cat);
+        addCat(R.string.mira,  R.string.cat, R.string.cymric ,R.string.female,R.string.brown, R.string.date_mira,R.string.owner21, R.drawable.mira_cat_cymric);
+        addCat(R.string.laura,  R.string.cat, R.string.himalayan ,R.string.female,R.string.white, R.string.date_laura,R.string.owner22, R.drawable.laura_cat_himalayan);
+    }
+
+    private static void initializeOther () {
+        addOther(R.string.kimba, R.string.parrot,R.string.cockatiel ,R.string.female,R.string.grey, R.string.date_kimba,R.string.owner3, R.drawable.kimba_parrot);
+        addOther(R.string.samy, R.string.hamster,R.string.syrian ,R.string.male,R.string.white, R.string.date_samy,R.string.owner31, R.drawable.samy_hamster);
+    }
+
+    static List<Pet> getListOfDogs() {
+        initializeDogs();
+        return listOfDogs;
+    }
+
+    static List<Pet> getListOfCats() {
+        initializeCats();
+        return listOfCats;
+    }
+
+    static List<Pet> getListOfOther() {
+        initializeOther();
+        return listOfOther;
+    }
 
 }
 

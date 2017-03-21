@@ -1,33 +1,86 @@
 <resources>
     <string name="app_name">MyPet</string>
+    <string name="title_activity_browse">MyPet</string>
+    <string name="title_activity_browse2">MyPet</string>
+    <string name="title_activity_browse3">MyPet</string>
 
-    <string name="hint_text">Write more information here ...</string>
-
+    <!--Names-->
     <string name="bob">Bob</string>
-    <string name="liza">Liza</string>
-    <string name="kimba">Kimba</string>
+    <string name="jaxon">Jaxon</string>
+    <string name="roni">Roni</string>
 
+    <string name="liza">Liza</string>
+    <string name="laura">Laura</string>
+    <string name="mira">Mira</string>
+
+    <string name="kimba">Kimba</string>
+    <string name="samy">Samy</string>
+
+    <!--Animals-->
     <string name="cat">Cat</string>
     <string name="dog">Dog</string>
     <string name="parrot">Parrot</string>
+    <string name="hamster">Hamster</string>
 
+    <!--Breed-->
     <string name="american_shorthair">Am/can Shorthair</string>
-    <string name="labrador">Labrador</string>
-    <string name="cockatiel">Cockatiel</string>
+    <string name="cymric">Cymric</string>
+    <string name="himalayan">Himalayan</string>
 
+    <string name="labrador">Labrador</string>
+    <string name="rotweiller">Rotweiller</string>
+    <string name="beagle">Beagle</string>
+
+    <string name="cockatiel">Cockatiel</string>
+    <string name="syrian">Syrian</string>
+
+    <!--Sex-->
     <string name="male">M</string>
     <string name="female">F</string>
 
+    <!--Colour-->
     <string name="blonde">Blonde</string>
     <string name="grey">Grey</string>
+    <string name="black">Black</string>
+    <string name="brown">Brown</string>
+    <string name="white">White</string>
 
+    <!--Date-->
     <string name="date_bob">10/6/2012</string>
-    <string name="date_liza">22/3/2010</string>
-    <string name="date_kimba">4/9/2013</string>
+    <string name="date_jaxon">15/3/2014</string>
+    <string name="date_roni">12/2/2017</string>
 
+
+    <string name="date_liza">22/3/2010</string>
+    <string name="date_laura">30/9/2015</string>
+    <string name="date_mira">18/5/2013</string>
+
+
+    <string name="date_kimba">4/9/2013</string>
+    <string name="date_samy">11/7/2015</string>
+
+
+    <!--Owner-->
     <string name="owner1">John Silver</string>
+    <string name="owner11">George Papadopoulos</string>
+    <string name="owner12">Andreas Danikas</string>
+
+
+
     <string name="owner2">Eleanor Guthrie</string>
+    <string name="owner21">James Flynt</string>
+    <string name="owner22">Chris Paul</string>
+
+
     <string name="owner3">Charles Vane</string>
+    <string name="owner31">John Snow</string>
+
+
+    <!--Views-->
+    <string name="button_for_dogs">Dogs</string>
+    <string name="button_for_cats">Cats</string>
+    <string name="button_for_other">Other</string>
+    <string name="hint_text">Write more information here ...</string>
 
 
 </resources>

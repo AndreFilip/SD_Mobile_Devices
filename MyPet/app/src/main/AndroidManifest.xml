@@ -16,6 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".BrowseActivity"
+                  android:label="@string/title_activity_browse"
+            >
+        </activity>
+        <activity
+            android:name=".BrowseActivity2"
+            android:label="@string/title_activity_browse2"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".BrowseActivity3"
+            android:label="@string/title_activity_browse3"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
