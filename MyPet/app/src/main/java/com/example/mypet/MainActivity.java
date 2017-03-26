@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
         mButtonCats = (Button) findViewById(R.id.button_for_cats);
         mButtonOther = (Button) findViewById(R.id.button_for_other);
 
-
-
         mButtonDogs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
