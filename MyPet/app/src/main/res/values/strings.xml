@@ -66,7 +66,6 @@
     <string name="owner12">Andreas Danikas</string>
 
 
-
     <string name="owner2">Eleanor Guthrie</string>
     <string name="owner21">James Flynt</string>
     <string name="owner22">Chris Paul</string>
@@ -82,5 +81,9 @@
     <string name="button_for_other">Other</string>
     <string name="hint_text">Write more information here ...</string>
 
+
+    <string name="list">List View</string>
+    <string name="grid">Grid View</string>
+    <string name="title_activity_adapter_layout">Pets</string>
 
 </resources>

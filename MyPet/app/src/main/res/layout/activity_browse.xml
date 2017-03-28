@@ -5,7 +5,8 @@
                 android:layout_height="match_parent"
                 android:padding="20dp">
 
-    <ImageView
+
+<ImageView
         android:id="@+id/image_view"
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -185,7 +186,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"/>
 
-</RelativeLayout>
 
+</RelativeLayout>
 
 

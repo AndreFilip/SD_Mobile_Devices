@@ -1,7 +1,8 @@
 package com.example.mypet;
 
 
- class Pet {
+
+class Pet {
 
      private int PetNameId;
      private int PetAnimalId;
@@ -87,6 +88,5 @@ package com.example.mypet;
      public void setPetAnimalId(int petAnimalId) {
          PetAnimalId = petAnimalId;
      }
-
 
  }

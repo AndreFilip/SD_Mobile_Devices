@@ -8,52 +8,65 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class ListActivity extends AppCompatActivity {
 
-    private GridView gridView;
+    static final String EXTRA_KEY = "";
+
+    static List<Pet> pets;
+
     private ListView listView;
-
-    private List<String> petCategories = PetFactory.getPetCategories();
+    private GridView gridView;
 
     private BaseAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list);
+
+        if (getIntent().getStringExtra(EXTRA_KEY).equalsIgnoreCase("dogs")) {
+            pets = PetFactory.getListOfDogs();
+        }
+        if (getIntent().getStringExtra(EXTRA_KEY).equalsIgnoreCase("cats")) {
+            pets = PetFactory.getListOfCats();
+        }
+        if (getIntent().getStringExtra(EXTRA_KEY).equalsIgnoreCase("hamsters")) {
+            pets = PetFactory.getListOfHamsters();
+        }
+        if (getIntent().getStringExtra(EXTRA_KEY).equalsIgnoreCase("parrots")) {
+            pets = PetFactory.getListOfParrots();
+        }
 
         listView = (ListView) findViewById(R.id.list_view);
-        gridView = (GridView) findViewById(R.id.grid_view);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String category = (String) adapter.getItem(position);
-                Intent intent = new Intent(MainActivity.this ,ListActivity.class);
-                intent.putExtra(ListActivity.EXTRA_KEY, category);
+                Intent intent = new Intent(ListActivity.this ,BrowseActivity.class);
+                intent.putExtra(BrowseActivity.EXTRA_KEY_FOR_LIST, position);
                 startActivity(intent);
             }
         });
 
+        gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String category = (String) adapter.getItem(position);
-                Intent intent = new Intent(MainActivity.this ,ListActivity.class);
-                intent.putExtra(ListActivity.EXTRA_KEY, category);
+                Intent intent = new Intent(ListActivity.this ,BrowseActivity.class);
+                intent.putExtra(BrowseActivity.EXTRA_KEY_FOR_LIST, position);
                 startActivity(intent);
             }
         });
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, petCategories);
+        adapter = new ItemAdapter(this, pets);
+
         showListView();
+
     }
 
     @Override
@@ -65,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         switch (item.getItemId()) {
             case R.id.menu_btn_list_view:
                 showListView();
@@ -93,4 +105,8 @@ public class MainActivity extends AppCompatActivity {
         gridView.setAdapter(adapter);
         gridView.setVisibility(View.VISIBLE);
     }
+
+
+
+
 }

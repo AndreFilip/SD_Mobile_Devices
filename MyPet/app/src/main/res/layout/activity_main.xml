@@ -5,31 +5,17 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose category"
-        android:layout_marginBottom="30dp"
-        android:textSize="25sp"/>
 
+    <ListView   android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
 
-    <Button
-        android:id="@+id/button_for_dogs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_for_dogs"/>
-
-    <Button
-        android:id="@+id/button_for_cats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_for_cats"/>
-
-    <Button
-        android:id="@+id/button_for_other"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_for_other"/>
+    <GridView   android:id="@+id/grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:numColumns="3" />
 
 
 
