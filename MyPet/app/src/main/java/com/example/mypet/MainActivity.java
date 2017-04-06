@@ -1,6 +1,7 @@
 package com.example.mypet;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String category = (String) adapter.getItem(position);
                 Intent intent = new Intent(MainActivity.this ,ListActivity.class);
+                String category = (String) adapter.getItem(position);
                 intent.putExtra(ListActivity.EXTRA_KEY, category);
                 startActivity(intent);
             }
@@ -45,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String category = (String) adapter.getItem(position);
                 Intent intent = new Intent(MainActivity.this ,ListActivity.class);
+                String category = (String) adapter.getItem(position);
                 intent.putExtra(ListActivity.EXTRA_KEY, category);
                 startActivity(intent);
             }
