@@ -18,6 +18,8 @@ class Pet {
     private int chipId;
     private int imageUri;
 
+    private String animals;
+
     public String getPetName() {
         return PetName;
     }
@@ -78,8 +80,12 @@ class Pet {
         return imageUri;
     }
 
+    public String getAnimals() {
+        return animals;
+    }
+
     Pet (String PetName, String dateOfBirth, String sex, String breed, String colour, String distinguishingMarks, int chipId, String ownerName, String ownerAddress, String ownerPhone, String VetName,
-         String VetAddress, String VetPhone, String comments, int imageUri)
+         String VetAddress, String VetPhone, String comments, int imageUri, String animals)
      {
          this.PetName = PetName;
          this.dateOfBirth = dateOfBirth;
@@ -96,7 +102,7 @@ class Pet {
          this.comments = comments;
          this.chipId = chipId;
          this.imageUri = imageUri;
-
+         this.animals = animals;
      }
 
 

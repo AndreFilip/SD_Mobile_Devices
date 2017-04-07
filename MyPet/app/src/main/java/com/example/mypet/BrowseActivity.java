@@ -31,13 +31,13 @@ public class BrowseActivity extends AppCompatActivity {
 
         helper = new PetDBSchemaHelper(this);
 
-        getAllPets();
+        getDesiredPets();
     }
 
-    private void getAllPets() {
-        SQLiteDatabase db = helper.getReadableDatabase();
+    private void getDesiredPets() {
+        SQLiteDatabase database = helper.getReadableDatabase();
 
-        Cursor cursor = db.query(PetDBSchema.PetTable.TABLE_NAME, PROJECTIONS, null, null, null, null, null);
+        Cursor cursor = database.query(PetDBSchema.PetTable.TABLE_NAME, PROJECTIONS, null, null, null, null, null);
         String results = "";
 
         while (cursor.moveToNext()) {
@@ -70,6 +70,10 @@ public class BrowseActivity extends AppCompatActivity {
 
     }
 
-
-
+    //onDestroy
+    @Override
+    protected void onDestroy() {
+        helper.close();
+        super.onDestroy();
+    }
 }

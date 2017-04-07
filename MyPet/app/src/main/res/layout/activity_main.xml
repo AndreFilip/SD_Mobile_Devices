@@ -17,8 +17,6 @@
                 android:layout_weight="1"
                 android:numColumns="3" />
 
-
-
 </LinearLayout>
 
 
