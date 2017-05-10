@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mypet">
+    package="com.example.andreas1.mypet">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -9,21 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity android:name=".LogInActivity"
+                  android:label="Log In" />
+        <activity android:name=".RegistrationActivity"
+                  android:label="Register"/>
         <activity android:name=".BrowseActivity"
-                  android:label="@string/title_activity_browse">
-        </activity>
+                  android:label="Details"/>
 
-        <activity android:name=".ListActivity">
-        </activity>
+        <service android:name=".UserService"
+            android:enabled="true"
+            android:exported="false" />
 
     </application>
+
+
 
 </manifest>
