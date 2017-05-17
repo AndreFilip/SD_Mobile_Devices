@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/image_view_layout_item"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"/>
 
@@ -17,12 +17,12 @@
         android:orientation="vertical">
 
         <TextView android:id="@+id/pet_name_view_layout_item"
+            android:textSize="12sp"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textSize="20sp"
-            android:layout_weight="1"/>
+            android:layout_height="wrap_content"/>
 
         <TextView android:id="@+id/pet_breed_view_layout_item"
+            android:textSize="9sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

@@ -1,60 +1,46 @@
 package com.example.andreas1.mypet;
 
-import android.content.SharedPreferences;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity {
-
-    private ListView listView;
-
-    private BaseAdapter adapter;
-    private List<Pet> pets = PetFactory.listOfPets;
+public class MainActivity extends AppCompatActivity implements FragmentCategoryChoice.OnFragmentInteractionListener {
 
     private boolean registrationStatus;
-    private String currentUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        SharedPreferences preferences = getSharedPreferences(LogInActivity.SHARED_PREFERENCES_FILE, 0);
-        registrationStatus = preferences.getBoolean(LogInActivity.SHARED_PREFERENCES_FILE_KEY_STATUS, false);
-        currentUsername = preferences.getString(LogInActivity.SHARED_PREFERENCES_FILE_KEY_USERNAME, "No username");
-        Toast.makeText(MainActivity.this, currentUsername + " is currently logged in.", Toast.LENGTH_SHORT).show();
+    @Override
+    public void onCategorySelected(int category) {
+        View fragmentContainer = findViewById(R.id.fragment_container);
+        boolean isDualPane = fragmentContainer != null && fragmentContainer.getVisibility() == View.VISIBLE;
 
-        adapter = new PetAdapter(this, pets);
-
-        listView = (ListView) findViewById(R.id.list_view);
-        listView.setAdapter(adapter);
-        listView.setVisibility(View.VISIBLE);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (!registrationStatus) {
-                    Toast.makeText(MainActivity.this, "Details are only available to registered users.", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Intent intent = new Intent (MainActivity.this, BrowseActivity.class);
-                    intent.putExtra(BrowseActivity.EXTRA_KEY_FOR_INDEX, position);
-                    startActivity(intent);
-                }
-            }
-        });
-
+        if (isDualPane) {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            FragmentPetChoice fragment = new FragmentPetChoice();
+            Bundle args = new Bundle();
+            args.putInt(FragmentPetChoice.EXTRA_PET_CATEGORY2, category);
+            args.putBoolean(FragmentPetChoice.EXTRA_FOR_STATUS2, registrationStatus);
+            fragment.setArguments(args);
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+        }else {
+            Intent intent = new Intent(this, BrowseActivity.class);
+            intent.putExtra(BrowseActivity.EXTRA_PET_CATEGORY, category);
+            intent.putExtra(BrowseActivity.EXTRA_FOR_STATUS, registrationStatus);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -102,9 +88,8 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         SharedPreferences preferences = getSharedPreferences(LogInActivity.SHARED_PREFERENCES_FILE, 0);
         registrationStatus = preferences.getBoolean(LogInActivity.SHARED_PREFERENCES_FILE_KEY_STATUS, false);
-        currentUsername = preferences.getString(LogInActivity.SHARED_PREFERENCES_FILE_KEY_USERNAME,"No username");
-        Toast.makeText(MainActivity.this, currentUsername + " is currently logged in.", Toast.LENGTH_SHORT).show();;
+        //String currentUsername = preferences.getString(LogInActivity.SHARED_PREFERENCES_FILE_KEY_USERNAME,"No username");
+        //Toast.makeText(MainActivity.this, currentUsername + " is currently logged in.", Toast.LENGTH_SHORT).show();
     }
+
 }
-
-

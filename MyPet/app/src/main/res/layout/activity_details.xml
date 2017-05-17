@@ -6,7 +6,7 @@
     android:padding="20dp">
 
 
-    <TextView
+    <ImageView
         android:id="@+id/image_view"
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -23,10 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_toLeftOf="@+id/pet_name_view"
-        android:layout_toStartOf="@+id/pet_name_view"
-        android:layout_marginRight="20sp"
-        android:layout_marginEnd="20sp"
+        android:layout_toRightOf="@+id/image_view"
+        android:layout_toEndOf="@+id/image_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:gravity="end">
 
         <TextView
@@ -117,8 +117,9 @@
         android:layout_height="wrap_content"
         android:text="Comments: "
         android:textSize="18sp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/image_view"
+        android:layout_below="@id/layout_information_text_stable"
         android:layout_marginTop="20sp"
         />
 
@@ -131,9 +132,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:maxLength="15"
-        />
+        android:layout_alignParentRight="true"        />
+    <!--android:maxLength="15"-->
+
 
     <TextView
         android:id="@+id/pet_date_of_birth_view"
@@ -141,9 +142,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/pet_name_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_name_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_sex_view"
@@ -151,9 +152,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_date_of_birth_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_date_of_birth_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_breed_view"
@@ -161,9 +162,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/pet_sex_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_sex_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_colour_view"
@@ -171,9 +172,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_breed_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_breed_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_distinguishing_marks_view"
@@ -181,9 +182,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_colour_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_colour_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_chip_id_view"
@@ -191,9 +192,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_distinguishing_marks_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_distinguishing_marks_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_name_owner_view"
@@ -201,36 +202,36 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_chip_id_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_chip_id_view"        />
+    <!--android:maxLength="15"-->
+    />
     <TextView
         android:id="@+id/pet_owner_address_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_name_owner_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_name_owner_view"        />
+    <!--android:maxLength="15"-->
+    />
     <TextView
         android:id="@+id/pet_owner_phone_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_owner_address_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_owner_address_view"        />
+    <!--android:maxLength="15"-->
+    />
     <TextView
         android:id="@+id/pet_vet_name_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_owner_phone_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_owner_phone_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_vet_address_view"
@@ -238,9 +239,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_vet_name_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_vet_name_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_vet_pnone_view"
@@ -248,17 +249,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@id/pet_vet_address_view"
-        android:maxLength="15"
-        />
+        android:layout_below="@id/pet_vet_address_view"        />
+    <!--android:maxLength="15"-->
+    />
 
     <TextView
         android:id="@+id/pet_comments_view"
         android:layout_width="wrap_content"
-        android:maxWidth="40sp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_for_comments"
-        android:layout_marginTop="5sp"
+        android:layout_toRightOf="@id/text_for_comments"
+        android:layout_toEndOf="@id/text_for_comments"
+        android:layout_below="@id/pet_vet_pnone_view"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginStart="5sp"
         android:maxLength="100"
         />
 

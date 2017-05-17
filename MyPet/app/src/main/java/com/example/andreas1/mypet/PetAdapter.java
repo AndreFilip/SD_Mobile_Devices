@@ -53,6 +53,5 @@ public class PetAdapter extends BaseAdapter {
         breedTextView.setText(pet.getBreed());
 
         return convertView;
-
     }
 }

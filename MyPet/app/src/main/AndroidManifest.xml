@@ -20,19 +20,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LogInActivity"
-                  android:label="Log In" />
-        <activity android:name=".RegistrationActivity"
-                  android:label="Register"/>
-        <activity android:name=".BrowseActivity"
-                  android:label="Details"/>
+        <activity android:name=".BrowseActivity"></activity>
+        <activity android:name=".DetailsActivity"/>
+        <activity android:name=".LogInActivity"/>
+        <activity android:name=".RegistrationActivity"/>
 
         <service android:name=".UserService"
             android:enabled="true"
             android:exported="false" />
 
     </application>
-
-
 
 </manifest>

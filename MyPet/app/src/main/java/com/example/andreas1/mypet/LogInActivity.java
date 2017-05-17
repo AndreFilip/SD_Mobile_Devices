@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity {
@@ -29,8 +28,7 @@ public class LogInActivity extends AppCompatActivity {
 
             Toast.makeText(LogInActivity.this, "Response: " + response, Toast.LENGTH_LONG).show();
 
-            if (booleanResult)            {
-
+            if (booleanResult) {
                 SharedPreferences preferences = getSharedPreferences(SHARED_PREFERENCES_FILE, 0);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString(SHARED_PREFERENCES_FILE_KEY_USERNAME, username);

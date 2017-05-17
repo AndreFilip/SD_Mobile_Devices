@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center"
+    android:orientation="vertical"
+    tools:context="com.example.andreas1.mypet.FragmentCategoryChoice">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Category"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <Button
+        android:id="@+id/buttonDogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dogs" />
+
+    <Button
+        android:id="@+id/buttonCats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cats" />
+
+    <Button
+        android:id="@+id/buttonParrots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parrots" />
+
+    <Button
+        android:id="@+id/buttonHamsters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hamsters" />
+
+</LinearLayout>
