@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyPet</string>
+    <string name="title_activity_browse">MyPet</string>
+    <string name="title_activity_adapter_layout">Pets</string>
+
+    <!--Menu options-->
+    <string name="list">List View</string>
+    <string name="grid">Grid View</string>
+
+</resources>
